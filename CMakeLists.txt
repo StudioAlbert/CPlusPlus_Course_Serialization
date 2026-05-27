@@ -15,7 +15,8 @@ add_executable(01_invariant         01_invariant/main.cpp)
 add_executable(02_use_cases         02_use_cases/main.cpp)
 add_executable(03_text_vs_binary    03_text_vs_binary/main.cpp)
 add_executable(04_raw_memory        04_raw_memory/main.cpp)
-add_executable(06_visitor_exercice_shapes 06_visitor_exercice_shapes/main.cpp)
+
+add_subdirectory(06_visitor_exercice_shapes)
 
 # Boost.Serialization is optional. If Boost is installed, build the demo.
 find_package(Boost QUIET COMPONENTS serialization)

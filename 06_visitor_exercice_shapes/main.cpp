@@ -9,20 +9,26 @@
 //   - Serializable<T>   : T est un type-feuille streamable dans les deux sens.
 //   - FieldVisitor<V>   : V expose un callback make_field(T&).
 
-#include <concepts>
-#include <cstddef>
+#include "shape.h"
+
 #include <iostream>
-#include <istream>
-#include <ostream>
-#include <sstream>
-#include <vector>
-
-struct Shape  { virtual ~Shape() = default; };
-struct Circle : Shape { double r; };
-struct Square : Shape { double side; };
-
 
 int main() {
 
+    Circle c;
+    c.r = 1.2f;
+
+    Square sq;
+    sq.side = 2.f;
+
+    AreaVisitor v;
+    std::cout << "Area = " << c.accept(v) << '\n';
+    std::cout << "Area = " << sq.accept(v) << '\n';
+
+    PerimeterVisitor w;
+    std::cout << "Perimeter = " << c.accept(w) << '\n';
+    std::cout << "Perimeter = " << sq.accept(w) << '\n';
+
     return 0;
+
 }
