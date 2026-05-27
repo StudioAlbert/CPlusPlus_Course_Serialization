@@ -30,7 +30,9 @@ int main() {
     // --- (a) Cas valide : tableau de POD ---
     std::vector<Tile> map{{1,true},{2,false},{3,true},{4,true}};
 
-    const auto path = std::filesystem::temp_directory_path() / "level.bin";
+    // const auto path = std::filesystem::temp_directory_path() / "level.bin";
+    const auto path = "D:/_dev/repos/C++/CPlusPlus_Course_Serialization/assets/level.bin";
+
     {
         std::ofstream os(path, std::ios::binary);
         os.write(reinterpret_cast<const char*>(map.data()),
