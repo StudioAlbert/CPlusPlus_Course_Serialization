@@ -65,7 +65,7 @@ int main() {
              Tile(3, true, "sand"), Tile(4, true, "snow")}};
 
 
-    const auto path = "D:/_dev/repos/C++/CPlusPlus_Course_Serialization/assets/level.txt";
+  const auto path = "D:/_dev/repos/C++/CPlusPlus_Course_Serialization/assets/level.txt";
   {
     std::ofstream ofs(path);
     boost::archive::text_oarchive oa(ofs);

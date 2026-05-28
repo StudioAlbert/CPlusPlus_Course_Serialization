@@ -17,6 +17,7 @@ add_executable(03_text_vs_binary    03_text_vs_binary/main.cpp)
 add_executable(04_raw_memory        04_raw_memory/main.cpp)
 
 add_subdirectory(06_visitor_exercice_shapes)
+add_subdirectory(07_visitor_exercice_tilemap)
 
 # Boost.Serialization is optional. If Boost is installed, build the demo.
 find_package(Boost QUIET COMPONENTS serialization)
